@@ -195,6 +195,71 @@ const Concierge = () => {
         </div>
       </section>
 
+      {/* Medication Reminders */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-primary mb-6">
+                Medication & Treatment Reminders
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Support that ensures patients stay aligned with protocol without overwhelming clinical teams.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Daily or timed medication reminders",
+                  "Adherence tracking & follow-up",
+                  "Symptom check-ins",
+                  "Protocol clarification & support"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-primary">
+                    <Pill className="w-5 h-5 text-accent mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                alt="Medication Reminders"
+                className="rounded-2xl shadow-2xl border border-border"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nurse & Lab Coordination */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-primary mb-4">
+              Nurse Coordination, Lab Visits & Chart Retrieval
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "In-Home Nurse Coordination", desc: "Scheduling, reminders, and preparation for in-home visits." },
+              { title: "Lab Visit Support", desc: "Reminders, pre-visit checks, and preparation guidance." },
+              { title: "Chart Retrieval", desc: "Medical record retrieval to support screening & ongoing monitoring." },
+              { title: "Documentation", desc: "All findings recorded in CTMS (CRIO, Clinical Conductor)." }
+            ].map((feat, i) => (
+              <Card key={i} className="border-0 shadow-sm hover:shadow-md transition-all">
+                <CardContent className="pt-8 pb-8">
+                  <div className="w-12 h-12 rounded-full bg-primary/5 text-accent flex items-center justify-center mb-6">
+                    <ClipboardList className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-bold text-lg text-primary mb-3">{feat.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feat.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Global Coverage */}
       <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">

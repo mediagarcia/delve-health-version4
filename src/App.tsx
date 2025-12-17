@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
 import SolutionECOA from "./pages/SolutionECOA";
+import Wearables from "./pages/Wearables";
 import Concierge from "./pages/Concierge";
 import Pharma from "./pages/Pharma";
 import MedTech from "./pages/MedTech";
@@ -31,12 +32,12 @@ const App = () => (
 
           {/* Solutions */}
           <Route path="/solutions/ecoa" element={<SolutionECOA />} />
-          <Route path="/solutions/wearables" element={<SolutionECOA />} />
+          <Route path="/solutions/wearables" element={<Wearables />} />
           <Route path="/solutions/concierge" element={<Concierge />} />
           <Route path="/solutions/econsent" element={<SolutionECOA />} />
           <Route path="/solutions/analytics" element={<SolutionECOA />} />
           <Route path="/solutions/provisioning" element={<SolutionECOA />} />
-          <Route path="/solutions/biomarkers" element={<SolutionECOA />} />
+          <Route path="/solutions/biomarkers" element={<Wearables />} />
 
           {/* Industries */}
           <Route path="/pharma" element={<Pharma />} />
