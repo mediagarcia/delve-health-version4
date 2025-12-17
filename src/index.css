@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 64% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 64% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 64% 10%;
+
+    /* Primary - Delve Navy */
+    --primary: 213 28% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Delve Orange */
+    --secondary: 18 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Subtle gray for muted elements */
+    --muted: 240 9% 95%;
+    --muted-foreground: 213 20% 45%;
+
+    /* Accent - Delve Teal */
+    --accent: 186 68% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 186 68% 57%;
+
+    --radius: 0.5rem;
+
+    /* Delve Brand Colors */
+    --delve-navy: 213 28% 29%;
+    --delve-teal: 186 68% 57%;
+    --delve-teal-dark: 185 54% 43%;
+    --delve-orange: 18 100% 59%;
+    --delve-gray: 240 9% 95%;
+
+    /* Hero gradient */
+    --gradient-hero: linear-gradient(135deg, hsl(213 28% 29%) 0%, hsl(213 28% 20%) 100%);
+
+    /* Subtle section background */
+    --section-subtle: 240 9% 95%;
+
+    /* Success green for outcomes */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 213 28% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 213 28% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 213 28% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 186 68% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 18 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 213 28% 20%;
+    --muted-foreground: 213 20% 65%;
+
+    --accent: 186 68% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 28% 25%;
+    --input: 213 28% 25%;
+    --ring: 186 68% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
